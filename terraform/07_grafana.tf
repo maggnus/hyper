@@ -5,7 +5,8 @@ resource "helm_release" "grafana_operator" {
   chart      = "grafana-operator"
 
   depends_on = [
-      kind_cluster.default
+      kind_cluster.default,
+      helm_release.prometheus
   ]
 }
 
