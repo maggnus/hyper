@@ -2,7 +2,7 @@
 Playground repository for local deployment multi-node Kubernetes cluster with `Terraform` and `KinD`.
 Two simple services `foo` and` bar` are located behind the `NGINX` ingress controller and periodically benchmark with `ab` tool along the appropriate endpoints. Collection and visualization of the metrics implemented with `Prometheus` and `Grafana` operators.
 
-![Deployment](https://github.com/maggnus/hyper/contrib/deployment.png)
+![Deployment](https://github.com/maggnus/hyper/blob/main/contrib/deployment.png)
 
 ## Prerequisites
 Tools required to apply this deployemnt:
