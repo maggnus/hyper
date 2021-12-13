@@ -26,4 +26,24 @@ Tools required to apply this deployemnt:
     ```sh
     kubectl get pods,svc
     ```
+## Dashboard
+Grafana dashboard creates with special Kubernetes resources `GrafanaDashboard` and could be provision dynamicly.
+```yaml
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDashboard
+metadata:
+  name: dashboard
+  labels:
+    app: grafana
+spec:
+  json: >
+    {{`{
+      "editable": true,
+      "gnetId": null,
+      "graphTooltip": 0,
+      ...
+```
 
+Exmaple:
+
+![Dashboard](https://github.com/maggnus/hyper/blob/main/contrib/dashboard.png)
