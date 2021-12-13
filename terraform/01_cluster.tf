@@ -1,8 +1,8 @@
 resource "kind_cluster" "default" {
-  name = "hyper-cluster"
+  name           = "hyper-cluster"
   wait_for_ready = true
   kind_config {
-    kind = "Cluster"
+    kind        = "Cluster"
     api_version = "kind.x-k8s.io/v1alpha4"
 
     node {

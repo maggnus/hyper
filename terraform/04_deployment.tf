@@ -27,13 +27,13 @@ resource "kubernetes_deployment" "backend_foo" {
           image = "hashicorp/http-echo"
           name  = "http-echo"
           args = [
-              join("", ["-listen=:", var.backend_port]),
-              "-text='foo'"
+            join("", ["-listen=:", var.backend_port]),
+            "-text='foo'"
           ]
           port {
             container_port = var.backend_port
           }
-  
+
           liveness_probe {
             http_get {
               path = "/foo"
@@ -82,8 +82,8 @@ resource "kubernetes_deployment" "backend_bar" {
           image = "hashicorp/http-echo"
           name  = "http-echo"
           args = [
-              join("", ["-listen=:", var.backend_port]), 
-              "-text='bar'"
+            join("", ["-listen=:", var.backend_port]),
+            "-text='bar'"
           ]
           port {
             container_port = var.backend_port
@@ -102,7 +102,7 @@ resource "kubernetes_deployment" "backend_bar" {
       }
     }
   }
-  
+
   depends_on = [
     kind_cluster.default,
   ]
