@@ -4,3 +4,4 @@
 .terraform
 *-config
 *.backup
+.DS_Store
